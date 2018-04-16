@@ -1,0 +1,27 @@
+{
+  "name": "v8-ic-processor",
+  "version": "0.0.0",
+  "description": "Processes and visualizes IC (inline cache) information collected for functions in your application",
+  "main": "v8-ic-processor.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thlorenz/v8-ic-processor.git"
+  },
+  "homepage": "https://github.com/thlorenz/v8-ic-processor",
+  "keywords": [],
+  "author": {
+    "name": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de",
+    "url": "http://thlorenz.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/thlorenz/v8-ic-processor/blob/master/LICENSE"
+  },
+  "engine": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "v8-tools-core": "0.0.0"
+  }
+}
