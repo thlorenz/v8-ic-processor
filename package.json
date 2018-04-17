@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Processes and visualizes IC (inline cache) information collected for functions in your application",
   "main": "v8-ic-processor.js",
+  "bin": "./bin/v8-ic-processor",
   "repository": {
     "type": "git",
     "url": "git://github.com/thlorenz/v8-ic-processor.git"
@@ -22,6 +23,10 @@
     "node": ">=8"
   },
   "dependencies": {
+    "connect": "~3.6.6",
+    "ecstatic": "~3.2.0",
+    "files-provider": "^0.1.2",
+    "opener": "~1.4.3",
     "v8-tools-core": "0.0.0"
   }
 }

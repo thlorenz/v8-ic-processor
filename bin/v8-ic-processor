@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+const {
+    createFilesProvider
+  , RETURN
+  , PROMPT
+} = require('files-provider')
+const {
+    createServer
+  , openWithV8LogFile
+} = require('../lib/ic-processor.server.js')
+
+const provideFiles = createFilesProvider({
+    single       : RETURN
+  , multi        : PROMPT
+  , promptHeader : 'V8 IC Processor - please select a v8.log file to open: '
+  , regex        : /^(isolate-.+-)?v8.log$/
+})
+
+;(async () => {
+  try {
+    const root = process.cwd()
+    const v8logFiles = await provideFiles.fromDirectory(root)
+
+    if (v8logFiles.length === 0) {
+      console.error('IC Processor - Problem:\n')
+      console.error('Unable to find a v8.log or isolate-*-v8.log in the current directory.')
+      console.error('Please produce it via "<node|d8> --trace-ic app.js"')
+      return
+    }
+    const { address } = createServer(root)
+    for (const v8logFile of v8logFiles) {
+      openWithV8LogFile({ address, fileName: v8logFile.entry })
+    }
+  } catch (err) {
+    console.error(err)
+  }
+})()
