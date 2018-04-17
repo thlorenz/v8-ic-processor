@@ -1,6 +1,6 @@
 {
   "name": "v8-ic-processor",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Processes and visualizes IC (inline cache) information collected for functions in your application",
   "main": "v8-ic-processor.js",
   "bin": "./bin/v8-ic-processor",
