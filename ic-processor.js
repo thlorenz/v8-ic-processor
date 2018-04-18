@@ -4,9 +4,9 @@
 
 if (typeof module === 'object' && typeof module.exports === 'object') {
   var LogReader = require('v8-tools-core/logreader');
-  var Profile = require('v8-tools-core/profile');
+  var { Profile } = require('v8-tools-core/profile');
   var { BaseArgumentsProcessor } = require('v8-tools-core/arguments');
-  module.exports = LogReader;
+  module.exports = IcProcessor;
 } 
 
 function inherits(childCtor, parentCtor) {
