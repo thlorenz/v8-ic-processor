@@ -27,6 +27,6 @@
     "ecstatic": "~3.2.0",
     "files-provider": "^0.1.2",
     "opener": "~1.4.3",
-    "v8-tools-core": "0.0.0"
+    "v8-tools-core": "~0.1.1"
   }
 }

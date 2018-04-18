@@ -2,6 +2,13 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+if (typeof module === 'object' && typeof module.exports === 'object') {
+  var LogReader = require('v8-tools-core/logreader');
+  var Profile = require('v8-tools-core/profile');
+  var { BaseArgumentsProcessor } = require('v8-tools-core/arguments');
+  module.exports = LogReader;
+} 
+
 function inherits(childCtor, parentCtor) {
   childCtor.prototype.__proto__ = parentCtor.prototype;
 };
